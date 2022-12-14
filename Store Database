@@ -1,0 +1,20 @@
+CREATE TABLE clothes_store ( id INTEGER PRIMARY KEY, styletype TEXT, price INTEGER, quantity INTEGER, size TEXT, color TEXT);
+
+INSERT INTO clothes_store VALUES 
+(1, "Jeans", 5.99, 2, "L", "blue"),(2, "Shorts", 10.99, 4, "XXL", "blue"),
+(3, "Shirt", 50.99, 10, "S", "white"),
+(4, "belt", 13.99, 8, "32W", "black"),
+(5, "Shoes", 100.99, 19, "12", "brown"),
+(6, "Socks", 12.99, 7, "XL", "white"),
+(7, "cuff links", 20.99, 3, "S", "silver"),
+(8, "Purfume", 50.99, 5, "NA", "blue"),
+(9, "Sandels", 65.99, 33, "15", "black"),
+(10, "Underwear", 85.99, 7, "S", "Red"),
+(11, "Wallet", 25.00, 10, "L", "Grey"),
+(12, "Tie", 16.00, 27, "L", "Stripe"),
+(13, "Sweater", 25.49, 13, "XXL", "Maroon"),
+(14, "Necklace", 2005.99, 2, "S", "silver"),
+(15, "Ring", 2.99, 53, "S", "black");
+SELECT * FROM clothes_store;
+SELECT SUM(quantity) FROM clothes_store;
+SELECT styletype, SUM (quantity) From clothes_store group by styletype;
